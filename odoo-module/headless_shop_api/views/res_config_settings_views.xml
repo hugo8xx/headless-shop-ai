@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_headless" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.headless</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority">90</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="Headless Shop API" string="Headless Shop API" name="headless_shop_api">
+                    <block title="REST API" name="headless_api_block">
+                        <setting id="headless_api_key_setting" string="API Key" help="Bearer token used by the storefront for server-side calls.">
+                            <field name="headless_api_key" password="True"/>
+                        </setting>
+                        <setting id="headless_cors_setting" string="Allowed Origins" help="Comma-separated origins; use * for any (dev only).">
+                            <field name="headless_cors_origins"/>
+                        </setting>
+                    </block>
+                    <block title="AI Integration" name="headless_ai_block">
+                        <setting id="headless_openai_setting" string="OpenAI API Key" help="Used to generate product embeddings.">
+                            <field name="headless_openai_api_key" password="True"/>
+                        </setting>
+                        <setting id="headless_anthropic_setting" string="Anthropic API Key" help="Used by the storefront for product Q&amp;A.">
+                            <field name="headless_anthropic_api_key" password="True"/>
+                        </setting>
+                        <setting id="headless_semantic_setting" string="Enable Semantic Search">
+                            <field name="headless_enable_semantic_search"/>
+                        </setting>
+                        <setting id="headless_model_setting" string="Embedding Model">
+                            <field name="headless_embedding_model"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+</odoo>
