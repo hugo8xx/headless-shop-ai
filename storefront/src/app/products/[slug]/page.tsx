@@ -21,9 +21,7 @@ export default async function ProductPage({ params }: { params: Params }) {
   }
   if (!product) notFound();
 
-  const heroImage =
-    odooImageUrl(product.images?.[0] || product.image_url) ||
-    `https://source.unsplash.com/1200x1200/?${encodeURIComponent(product.name)}`;
+  const heroImage = odooImageUrl(product.images?.[0] || product.image_url);
 
   return (
     <div className="container mx-auto space-y-16 py-10">

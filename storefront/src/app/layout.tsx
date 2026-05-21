@@ -6,10 +6,19 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Headless Shop · AI-powered storefront on Odoo',
+  title: {
+    default: 'Northshelf — Better goods, found by AI',
+    template: '%s · Northshelf',
+  },
   description:
-    'A modern Next.js storefront powered by Odoo backend with AI semantic search, product Q&A, and recommendations.',
+    'Curated electronics, apparel, home, and outdoor essentials. Ask our AI for picks in plain English — shipped from Bangkok with free 2-day delivery over ฿1,500.',
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  openGraph: {
+    title: 'Northshelf — Better goods, found by AI',
+    description: 'Curated everyday essentials with AI-powered search. Ships from Bangkok.',
+    siteName: 'Northshelf',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -6,10 +6,10 @@ import { Search, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const EXAMPLES = [
-  'warm jacket for winter hiking',
-  'gift for a coffee-obsessed dad',
-  'something quiet for late-night work',
-  'minimalist desk setup under ฿10,000',
+  'warm jacket for hiking in Hokkaido',
+  'a gift for a coffee-obsessed dad',
+  'quiet headphones for late-night work',
+  'something cozy for rainy season',
 ];
 
 export function AISearchBar({ size = 'lg' }: { size?: 'lg' | 'md' }) {

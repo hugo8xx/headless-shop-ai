@@ -87,7 +87,13 @@ export default function CartPage() {
             <div key={line.id} className="flex items-center gap-4 rounded-2xl border bg-card p-4">
               <div className="relative h-20 w-20 overflow-hidden rounded-xl bg-muted">
                 {line.image_url && (
-                  <Image src={`${process.env.NEXT_PUBLIC_SITE_URL || ''}${line.image_url}`} alt={line.product_name} fill className="object-cover" />
+                  <Image
+                    src={line.image_url.startsWith('http') ? line.image_url : `${process.env.NEXT_PUBLIC_SITE_URL || ''}${line.image_url}`}
+                    alt={line.product_name}
+                    fill
+                    sizes="80px"
+                    className="object-cover"
+                  />
                 )}
               </div>
               <div className="flex-1">

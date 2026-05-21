@@ -156,3 +156,12 @@ export function odooImageUrl(path: string) {
   if (path.startsWith('http')) return path;
   return `${ODOO_URL}${path}`;
 }
+
+// Browser-safe variant used by client components that don't have access to ODOO_URL.
+// External URLs (Unsplash etc.) pass through; relative paths are returned as-is and
+// served by the Next.js dev proxy or directly by Odoo when same-origin.
+export function clientImageUrl(path: string) {
+  if (!path) return '';
+  if (path.startsWith('http')) return path;
+  return path;
+}
