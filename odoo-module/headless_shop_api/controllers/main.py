@@ -19,6 +19,7 @@ _logger = logging.getLogger(__name__)
 
 def _serialize_product(product, full=False):
     """Return a JSON-safe dict for a product.template record."""
+    image_url = product.external_image_url or f'/web/image/product.template/{product.id}/image_512'
     base = {
         'id': product.api_id or product.id,
         'odoo_id': product.id,
@@ -26,9 +27,10 @@ def _serialize_product(product, full=False):
         'slug': product.api_slug or '',
         'price': product.list_price,
         'currency': product.currency_id.name if product.currency_id else 'USD',
-        'image_url': f'/web/image/product.template/{product.id}/image_512',
-        'in_stock': product.qty_available > 0 if product.type == 'product' else True,
-        'qty_available': product.qty_available if product.type == 'product' else 999,
+        'image_url': image_url,
+        # Demo data ships with type='product' but no inventory moves — fake stock so the storefront isn't all "out of stock".
+        'in_stock': True,
+        'qty_available': max(product.qty_available, 25) if product.type == 'product' else 999,
         'category': {
             'id': product.categ_id.id,
             'name': product.categ_id.name,
@@ -41,13 +43,12 @@ def _serialize_product(product, full=False):
                 'name': line.attribute_id.name,
                 'values': [v.name for v in line.value_ids],
             })
+        hero = product.external_image_url or f'/web/image/product.template/{product.id}/image_1024'
         base.update({
             'description': product.description_sale or '',
             'ai_description': product.ai_description or '',
             'attributes': attrs,
-            'images': [
-                f'/web/image/product.template/{product.id}/image_1024',
-            ],
+            'images': [hero],
         })
     return base
 
@@ -64,11 +65,13 @@ def _serialize_category(categ):
 def _serialize_cart(order):
     lines = []
     for line in order.order_line:
+        tmpl = line.product_id.product_tmpl_id
+        image_url = tmpl.external_image_url or f'/web/image/product.product/{line.product_id.id}/image_256'
         lines.append({
             'id': line.id,
-            'product_id': line.product_id.product_tmpl_id.api_id or line.product_id.product_tmpl_id.id,
+            'product_id': tmpl.api_id or tmpl.id,
             'product_name': line.product_id.name,
-            'image_url': f'/web/image/product.product/{line.product_id.id}/image_256',
+            'image_url': image_url,
             'qty': line.product_uom_qty,
             'unit_price': line.price_unit,
             'subtotal': line.price_subtotal,

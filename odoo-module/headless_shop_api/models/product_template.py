@@ -38,6 +38,10 @@ class ProductTemplate(models.Model):
         string='Embedding (JSON)',
         help='OpenAI/text-embedding-3-small vector serialised as JSON array.',
     )
+    external_image_url = fields.Char(
+        string='External Image URL',
+        help='CDN-hosted hero image used by the headless storefront. Falls back to Odoo binary image if blank.',
+    )
 
     @api.model_create_multi
     def create(self, vals_list):

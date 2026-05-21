@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<odoo noupdate="0">
     <!-- Categories -->
     <record id="cat_electronics" model="product.category">
         <field name="name">Electronics</field>
@@ -28,6 +28,7 @@
         <field name="list_price">8990</field>
         <field name="standard_price">3500</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">Studio-grade wireless headphones with 40-hour battery life and adaptive noise cancellation. Engineered for travel, focus work, and audiophile listening.</field>
         <field name="ai_description">&lt;p&gt;Step into a private concert hall with the Aura Pro. Hybrid 40mm drivers deliver warm lows and crystal-clear highs, while four-microphone adaptive ANC silences your commute. The 40-hour battery and rapid 10-minute charge mean you can grab them on the way out and not look back.&lt;/p&gt;&lt;p&gt;Memory foam earcups, aerospace-grade aluminium hinges, and a 240g featherweight chassis make 12-hour wear effortless.&lt;/p&gt;</field>
     </record>
@@ -38,6 +39,7 @@
         <field name="list_price">3490</field>
         <field name="standard_price">1200</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">True wireless earbuds with multipoint Bluetooth 5.3, IP55 sweat resistance, and a 28-hour total runtime with the charging case.</field>
     </record>
 
@@ -47,6 +49,7 @@
         <field name="list_price">12900</field>
         <field name="standard_price">5400</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">Always-on AMOLED display, blood-oxygen tracking, sleep scoring, and 14-day battery. Built for runners, swimmers, and weekend hikers.</field>
     </record>
 
@@ -56,6 +59,7 @@
         <field name="list_price">42500</field>
         <field name="standard_price">22000</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">A 24MP APS-C mirrorless body with phase-detect autofocus, 4K60 video, and a tilt-flip touchscreen. Includes 18-55mm kit lens.</field>
     </record>
 
@@ -65,6 +69,7 @@
         <field name="list_price">5490</field>
         <field name="standard_price">1800</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">Hot-swappable 65% mechanical keyboard, gasket mount, PBT double-shot keycaps. Sounds thocky, feels buttery.</field>
     </record>
 
@@ -75,6 +80,7 @@
         <field name="list_price">7990</field>
         <field name="standard_price">2700</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">Lightweight 800-fill down jacket with DWR coating. Packs into its own pocket. Tested to -10°C in real conditions.</field>
     </record>
 
@@ -84,6 +90,7 @@
         <field name="list_price">890</field>
         <field name="standard_price">220</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">Soft Peruvian pima cotton in a clean, modern fit. Pre-washed for zero shrinkage. Five colourways.</field>
     </record>
 
@@ -93,6 +100,7 @@
         <field name="list_price">4290</field>
         <field name="standard_price">1450</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">Recycled-mesh upper, energy-return EVA midsole, and a road-grip rubber outsole. Daily-driver sneakers for city walkers and casual runners.</field>
     </record>
 
@@ -102,6 +110,7 @@
         <field name="list_price">2890</field>
         <field name="standard_price">950</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">Water-resistant ripstop nylon, padded 16-inch laptop sleeve, hidden anti-theft pocket. Carry-on friendly.</field>
     </record>
 
@@ -112,6 +121,7 @@
         <field name="list_price">1690</field>
         <field name="standard_price">420</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">Dimmable warm-white LED with a brushed aluminium base. Touch controls and USB-C charging port for your phone.</field>
     </record>
 
@@ -121,6 +131,7 @@
         <field name="list_price">790</field>
         <field name="standard_price">180</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1572119865084-43c285814d63?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">Double-walled vacuum stainless steel. Keeps coffee hot for 8 hours, cold drinks cold for 16. Spillproof flip lid.</field>
     </record>
 
@@ -130,6 +141,7 @@
         <field name="list_price">1290</field>
         <field name="standard_price">320</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">Ultrasonic essential-oil diffuser with seven LED moods. Auto-shutoff and whisper-quiet operation.</field>
     </record>
 
@@ -139,6 +151,7 @@
         <field name="list_price">1990</field>
         <field name="standard_price">540</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1567016526105-22da7c13161a?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">Chunky-knit chenille throw, hypoallergenic and machine washable. 130 x 170cm.</field>
     </record>
 
@@ -149,6 +162,7 @@
         <field name="list_price">690</field>
         <field name="standard_price">220</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">Victor Papanek's classic call for socially and ecologically responsible design. New 50th anniversary edition.</field>
     </record>
 
@@ -158,6 +172,7 @@
         <field name="list_price">820</field>
         <field name="standard_price">280</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1532012197267-da84d127e765?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">John Ousterhout's principles for taming complexity in long-lived codebases. Recommended for senior engineers and tech leads.</field>
     </record>
 
@@ -168,6 +183,7 @@
         <field name="list_price">1490</field>
         <field name="standard_price">420</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1545389336-cf090694435e?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">Natural rubber base with PU top, alignment lines, and superior grip even when sweaty.</field>
     </record>
 
@@ -177,6 +193,7 @@
         <field name="list_price">690</field>
         <field name="standard_price">180</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">Insulated stainless-steel bottle that survives drops, dishwashers, and bike trails.</field>
     </record>
 
@@ -186,6 +203,7 @@
         <field name="list_price">6990</field>
         <field name="standard_price">2400</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">2-person 3-season tent at 1.8kg packed. 1500mm waterproof rating. Easy pole-clip setup in under 5 minutes.</field>
     </record>
 
@@ -195,6 +213,7 @@
         <field name="list_price">1290</field>
         <field name="standard_price">340</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1483721310020-03333e577078?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">Featherlight ripstop running shorts with a built-in liner, zipped back pocket, and reflective trim.</field>
     </record>
 
@@ -204,6 +223,7 @@
         <field name="list_price">2490</field>
         <field name="standard_price">820</field>
         <field name="type">product</field>
+        <field name="external_image_url">https://images.unsplash.com/photo-1638536532686-d610adfc8e5c?w=900&amp;q=80&amp;auto=format&amp;fit=crop</field>
         <field name="description_sale">Pair of rubber-coated hex dumbbells with ergonomic chrome handles. No roll, no floor scuffs.</field>
     </record>
 </odoo>
