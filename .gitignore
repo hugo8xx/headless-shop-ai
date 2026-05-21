@@ -1,0 +1,34 @@
+# Node
+node_modules
+.npm
+*.log
+
+# Next.js
+.next
+out
+storefront/.next
+storefront/node_modules
+
+# Env
+.env
+.env.local
+.env.*.local
+docker/.env
+
+# Build artifacts
+*.tsbuildinfo
+next-env.d.ts
+
+# Python / Odoo
+__pycache__
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea
+.vscode
+*.swp

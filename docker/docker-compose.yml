@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  odoo:
+    image: odoo:17.0
+    depends_on:
+      - db
+    ports:
+      - '8069:8069'
+    volumes:
+      - ../odoo-module:/mnt/extra-addons
+      - odoo-data:/var/lib/odoo
+    environment:
+      HOST: db
+      USER: odoo
+      PASSWORD: odoo
+    command: >
+      odoo
+      --addons-path=/mnt/extra-addons,/usr/lib/python3/dist-packages/odoo/addons
+      --dev=reload,qweb,werkzeug,xml
+    restart: unless-stopped
+
+  storefront:
+    build:
+      context: ../storefront
+      dockerfile: Dockerfile
+    depends_on:
+      - odoo
+    ports:
+      - '3000:3000'
+    environment:
+      ODOO_URL: http://odoo:8069
+      ODOO_API_KEY: ${ODOO_API_KEY:-}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-claude-sonnet-4-6}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_EMBEDDING_MODEL: ${OPENAI_EMBEDDING_MODEL:-text-embedding-3-small}
+      NEXT_PUBLIC_SITE_URL: http://localhost:3000
+    restart: unless-stopped
+
+volumes:
+  db-data:
+  odoo-data:
