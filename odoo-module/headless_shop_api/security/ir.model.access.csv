@@ -1,6 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_product_template_api_user,product.template api user,product.template,headless_shop_api.group_headless_api_user,1,0,0,0
-access_product_product_api_user,product.product api user,product.template,headless_shop_api.group_headless_api_user,1,0,0,0
-access_product_category_api_user,product.category api user,product.category,headless_shop_api.group_headless_api_user,1,0,0,0
-access_sale_order_api_manager,sale.order api manager,sale.sale.order,headless_shop_api.group_headless_api_manager,1,1,1,0
-access_sale_order_line_api_manager,sale.order.line api manager,sale.sale.order_line,headless_shop_api.group_headless_api_manager,1,1,1,1
+access_product_template_api_user,product.template api user,product.model_product_template,headless_shop_api.group_headless_api_user,1,0,0,0
+access_product_product_api_user,product.product api user,product.model_product_product,headless_shop_api.group_headless_api_user,1,0,0,0
+access_product_category_api_user,product.category api user,product.model_product_category,headless_shop_api.group_headless_api_user,1,0,0,0
+access_sale_order_api_manager,sale.order api manager,sale.model_sale_order,headless_shop_api.group_headless_api_manager,1,1,1,0
+access_sale_order_line_api_manager,sale.order.line api manager,sale.model_sale_order_line,headless_shop_api.group_headless_api_manager,1,1,1,1
