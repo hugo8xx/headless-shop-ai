@@ -16,7 +16,7 @@ services:
     depends_on:
       - db
     ports:
-      - '8069:8069'
+      - '8169:8069'
     volumes:
       - ../odoo-module:/mnt/extra-addons
       - odoo-data:/var/lib/odoo
@@ -30,23 +30,26 @@ services:
       --dev=reload,qweb,werkzeug,xml
     restart: unless-stopped
 
-  storefront:
-    build:
-      context: ../storefront
-      dockerfile: Dockerfile
-    depends_on:
-      - odoo
-    ports:
-      - '3000:3000'
-    environment:
-      ODOO_URL: http://odoo:8069
-      ODOO_API_KEY: ${ODOO_API_KEY:-}
-      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
-      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-claude-sonnet-4-6}
-      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
-      OPENAI_EMBEDDING_MODEL: ${OPENAI_EMBEDDING_MODEL:-text-embedding-3-small}
-      NEXT_PUBLIC_SITE_URL: http://localhost:3000
-    restart: unless-stopped
+  # Storefront runs separately via `npm run dev` for faster iteration.
+  # Uncomment to run as a container (slower first build):
+  #
+  # storefront:
+  #   build:
+  #     context: ../storefront
+  #     dockerfile: Dockerfile
+  #   depends_on:
+  #     - odoo
+  #   ports:
+  #     - '3000:3000'
+  #   environment:
+  #     ODOO_URL: http://odoo:8069
+  #     ODOO_API_KEY: ${ODOO_API_KEY:-}
+  #     ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+  #     ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-claude-sonnet-4-6}
+  #     OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+  #     OPENAI_EMBEDDING_MODEL: ${OPENAI_EMBEDDING_MODEL:-text-embedding-3-small}
+  #     NEXT_PUBLIC_SITE_URL: http://localhost:3000
+  #   restart: unless-stopped
 
 volumes:
   db-data:

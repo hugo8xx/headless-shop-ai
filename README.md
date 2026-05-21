@@ -60,8 +60,8 @@ cp storefront/.env.example storefront/.env.local
 # 2. Start everything
 cd docker && docker compose up -d
 
-# 3. Initialise Odoo: open http://localhost:8069, create database "shop", install "Headless Shop REST API"
-#    Settings → Headless Shop API → paste your Anthropic / OpenAI keys, set an API key, save.
+# 3. Initialise Odoo: open http://localhost:8069, create database "shop", install "Northshelf REST API"
+#    Settings → Northshelf API → paste your Anthropic / OpenAI keys, set an API key, save.
 #    Copy that API key into ODOO_API_KEY in docker/.env (or storefront/.env.local) and restart storefront.
 
 # 4. Open the storefront
